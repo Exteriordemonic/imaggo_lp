@@ -1,0 +1,30 @@
+.cowork {
+  &__list {
+    @include cssLock(
+      "grid-row-gap",
+      360,
+      1366,
+      (($gutter_num * 5), ($gutter_num * 10))
+    );
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+    @include media(md) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  &__elem {
+    @include cssLock(
+      "padding",
+      360,
+      1366,
+      (($gutter_num * 3), ($gutter_num * 6))
+    );
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}

@@ -1,0 +1,45 @@
+.header {
+  @include cssLock(
+    "padding-top",
+    360,
+    1366,
+    (($gutter_num * 2.5), ($gutter_num * 5))
+  );
+  @include cssLock(
+    "padding-bottom",
+    360,
+    1366,
+    (($gutter_num * 2.5), $gutter_num * 5)
+  );
+  @include cssLock(
+    "padding-left",
+    360,
+    1366,
+    (($gutter_num * 4), ($gutter_num * 17))
+  );
+
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  z-index: 10;
+
+  @include media(md) {
+    justify-content: center;
+    padding-left: 0;
+  }
+
+  &__logo {
+    @include cssLock(
+      "width",
+      360,
+      1366,
+      (($gutter_num * 8.5), $gutter_num * 17)
+    );
+
+    height: auto;
+    margin: 0;
+  }
+}

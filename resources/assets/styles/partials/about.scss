@@ -1,0 +1,100 @@
+.about {
+  @include cssLock(
+    "padding-left",
+    360,
+    1366,
+    (($gutter_num * 3), ($gutter_num * 6))
+  );
+  @include cssLock(
+    "padding-right",
+    360,
+    1366,
+    (($gutter_num * 3), ($gutter_num * 6))
+  );
+
+  position: relative;
+  background-color: color(special);
+
+  @media (max-width: 992px) {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  &__list {
+    @include cssLock(
+      "grid-gap",
+      360,
+      1366,
+      (($gutter_num * 5), ($gutter_num * 10))
+    );
+
+    display: grid;
+    grid-template-columns: 1fr;
+
+    @include media(md) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  &__num {
+    @include cssLock(
+      "font-size",
+      360,
+      1366,
+      (($gutter_num * 5), ($gutter_num * 10))
+    );
+
+    position: relative;
+    display: block;
+    font-weight: 700;
+  }
+
+  &__subtitle {
+    @include cssLock(
+      "margin-bottom",
+      360,
+      1366,
+      (($gutter_num * 1.5), ($gutter_num * 3))
+    );
+  }
+
+  &__num-single {
+    position: relative;
+    z-index: 10;
+    padding-left: $gutter*2;
+  }
+
+  &__donat {
+    @extend %absolute;
+
+    @include cssLock(
+      "left",
+      360,
+      1366,
+      (($gutter_num * -2), ($gutter_num * -8.5))
+    );
+
+    top: -$gutter;
+    bottom: unset;
+    right: unset;
+    display: none;
+
+    @include media(md) {
+      display: initial;
+    }
+  }
+
+  &__num-donat {
+    @extend %absolute;
+
+    right: unset;
+    left: 0;
+    z-index: 0;
+    width: 10%;
+    transform: rotateY(180deg);
+
+    @include media(md) {
+      width: 50%;
+    }
+  }
+}

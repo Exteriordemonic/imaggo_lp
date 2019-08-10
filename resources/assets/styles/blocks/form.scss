@@ -1,0 +1,28 @@
+.form {
+  &__label {
+    @include cssLock(
+      "margin-bottom",
+      360,
+      1366,
+      (($gutter_num * 0.5), ($gutter_num * 1))
+    );
+
+    display: block;
+    width: 100%;
+  }
+
+  &__input {
+    @include cssLock(
+      "margin-bottom",
+      360,
+      1366,
+      (($gutter_num * 1), ($gutter_num * 2))
+    );
+
+    display: block;
+    width: 100%;
+    border: 0;
+    background: transparent;
+    border-bottom: 1px solid color(dark);
+  }
+}

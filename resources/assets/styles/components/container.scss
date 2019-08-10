@@ -1,0 +1,28 @@
+.container {
+  @include cssLock(
+    "padding-left",
+    360,
+    1366,
+    (($gutter_num * 4), ($gutter_num * 17))
+  );
+  @include cssLock(
+    "padding-right",
+    360,
+    1366,
+    (($gutter_num * 4), $gutter_num * 17)
+  );
+
+  position: relative;
+
+  &--clear-left {
+    @include media(md) {
+      padding-left: 0;
+    }
+  }
+
+  &--clear-right {
+    @include media(md) {
+      padding-right: 0;
+    }
+  }
+}

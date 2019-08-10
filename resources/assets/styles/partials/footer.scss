@@ -1,0 +1,86 @@
+.footer {
+  background-color: color(primary);
+
+  @include media(lg) {
+    background: transparent;
+  }
+
+  &__content {
+    @include cssLock(
+      "padding",
+      360,
+      1366,
+      (($gutter_num * 1.5), ($gutter_num * 3))
+    );
+
+    position: relative;
+    max-width: $gutter * 100;
+    background-color: color(primary);
+    color: color(dark);
+  }
+
+  &__form {
+    width: 70%;
+  }
+
+  &__img {
+    padding: 0;
+    margin: 0;
+    position: relative;
+    background-color: color(primary);
+    width: 50%;
+    padding-top: 65%;
+    left: 0;
+    margin-top: $gutter * 2;
+
+    @include media(lg) {
+      position: absolute;
+      width: 50%;
+      left: 75%;
+      padding-top: 65%;
+      top: $gutter * 4;
+    }
+
+    .img {
+      top: 0;
+      left: 0;
+      opacity: 0.7;
+    }
+  }
+
+  &__phone {
+    @include cssLock(
+      "bottom",
+      360,
+      1366,
+      (($gutter_num * 2), ($gutter_num * 4))
+    );
+    @include cssLock("left", 360, 1366, (($gutter_num * 2), ($gutter_num * 4)));
+
+    position: absolute;
+    font-weight: 600;
+    color: color(light);
+
+    .phone {
+      width: auto;
+      display: inline-block;
+      margin: -1px $gutter * 0.5 -1px 0;
+    }
+  }
+
+  &__donat {
+    @extend %absolute;
+
+    bottom: unset;
+    right: unset;
+    left: -10%;
+    top: 0;
+    z-index: 10;
+    width: auto;
+    display: none;
+
+    @include media(md) {
+      display: initial;
+    }
+  }
+}

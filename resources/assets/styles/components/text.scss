@@ -1,0 +1,66 @@
+%text {
+  margin: 0;
+  padding: 0;
+  font-weight: 400;
+}
+
+.headline {
+  @extend %text;
+
+  @include cssLock(
+    "font-size",
+    360,
+    1366,
+    (($gutter_num * 3.5), ($gutter_num * 6))
+  );
+
+  font-weight: 900;
+}
+
+.title {
+  @extend %text;
+
+  @include cssLock(
+    "font-size",
+    360,
+    1366,
+    (($gutter_num * 2.25), ($gutter_num * 4.5))
+  );
+
+  font-weight: 900;
+}
+
+.subtitle {
+  @extend %text;
+
+  @include cssLock(
+    "font-size",
+    360,
+    1366,
+    (($gutter_num * 1.25), ($gutter_num * 2.25))
+  );
+
+  font-weight: 900;
+}
+
+.text {
+  @extend %text;
+
+  @include cssLock(
+    "font-size",
+    360,
+    1366,
+    (($gutter_num * 1), ($gutter_num * 1.75))
+  );
+
+  line-height: 2;
+}
+
+.text-major {
+  @include cssLock(
+    "font-size",
+    360,
+    1366,
+    (($gutter_num * 1.2), ($gutter_num * 2))
+  );
+}

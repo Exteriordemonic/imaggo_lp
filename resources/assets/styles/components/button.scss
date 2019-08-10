@@ -1,0 +1,74 @@
+.button {
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+
+  &--mouse {
+    position: relative;
+    border: $gutter * 0.4 solid;
+    color: inherit;
+    height: $gutter * 4.5;
+    width: $gutter * 2.5;
+    border-radius: $gutter * 2;
+    outline: 0;
+
+    &::before {
+      @extend %absolute;
+
+      content: "";
+      bottom: unset;
+      top: $gutter * 0.6;
+      width: 2px;
+      height: $gutter;
+      background-color: color(light);
+      animation: mouse-dot $transition * 3 linear infinite both;
+    }
+
+    &::after {
+      @extend %absolute;
+
+      content: "";
+      bottom: unset;
+      top: calc(100% + #{$gutter * 5});
+      width: $gutter * 0.4;
+      height: $gutter * 20;
+      background-color: color(light);
+    }
+  }
+
+  &--primary {
+    @include cssLock(
+      "padding",
+      360,
+      1366,
+      (($gutter_num*0.5), ($gutter_num))
+    );
+    @include cssLock(
+      "padding-left",
+      360,
+      1366,
+      (($gutter_num*2), ($gutter_num * 6))
+    );
+    @include cssLock(
+      "padding-right",
+      360,
+      1366,
+      (($gutter_num*2), ($gutter_num * 6))
+    );
+
+    color: color(light);
+    background-color: color(dark);
+  }
+}
+
+@keyframes mouse-dot {
+  0% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translateY($gutter);
+  }
+}

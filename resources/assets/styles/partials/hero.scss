@@ -1,0 +1,105 @@
+.hero {
+  position: relative;
+  background: color(primary);
+  color: color(light);
+  overflow: hidden;
+
+  @include media(xl) {
+    height: 100vh;
+  }
+
+  &__wrapper {
+    display: grid;
+    grid-template-columns: 1fr;
+
+    @include media(sm) {
+      grid-template-columns: 2fr ($gutter * 10) 3fr;
+    }
+
+    @include media(xl) {
+      grid-template-columns: 2fr ($gutter * 25) 3fr;
+    }
+  }
+
+  &__content {
+    @include cssLock(
+      "padding-top",
+      360,
+      1366,
+      (($gutter_num * 2.5), ($gutter_num * 5))
+    );
+    @include cssLock(
+      "padding-bottom",
+      360,
+      1366,
+      (($gutter_num * 2.5), ($gutter_num * 5))
+    );
+
+    position: relative;
+    z-index: 10;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 1;
+  }
+
+  &__dsc {
+    @include media(sm) {
+      padding-right: $gutter * 15;
+    }
+
+    @include media(xl) {
+      padding-right: $gutter * 30;
+    }
+  }
+
+  &__img {
+    @extend %overlay;
+
+    display: none;
+    padding: 0;
+    margin: 0;
+    grid-column-start: 2;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 1;
+
+    @include media(sm) {
+      display: initial;
+    }
+  }
+
+  &__button {
+    @include cssLock(
+      "left",
+      360,
+      1366,
+      (($gutter_num * 4), ($gutter_num * 17))
+    );
+
+    bottom: $gutter * 10;
+    position: absolute;
+    z-index: 10;
+    display: none;
+
+    @include media(md) {
+      display: initial;
+    }
+
+    @include media(xl) {
+      bottom: $gutter * 5;
+    }
+  }
+
+  &__donat {
+    @extend %absolute;
+
+    bottom: unset;
+    right: unset;
+    left: 92%;
+
+    @include media(md) {
+      left: 0;
+    }
+  }
+}

@@ -1,0 +1,8 @@
+.donat {
+  @include cssLock(
+    "width",
+    360,
+    1366,
+    (($gutter_num * 4), ($gutter_num * 17))
+  );
+}
