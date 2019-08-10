@@ -28,9 +28,12 @@ const routes = new Router({
 
 // Load Events
 jQuery(document).ready(() => {
-  routes.loadEvents();
-  var rellax = new Rellax('.rellax');
-  rellax;
+
+  if (window.innerWidth > 776) {
+    routes.loadEvents();
+    var rellax = new Rellax('.rellax');
+    rellax;
+  }
 
   smoothScroll.init();
 });
