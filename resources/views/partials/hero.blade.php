@@ -26,5 +26,4 @@
       </figure>
     </div>
   </div>
-  <button class="hero__button button button--mouse rellax" data-rellax-speed="1" data-scroll-down></button>
 </section>

@@ -13,12 +13,12 @@
           <label for="name" class="form__label text">
             Imię
           </label>
-          <input required id="name" name="name" type="text" class="form__input text">
+          <input id="name" name="name" type="text" class="form__input text">
 
           <label for="phone" class="form__label text">
             Numer telefonu
           </label>
-          <input required id="phone" name="phone" type="phone" class="form__input text">
+          <input id="phone" name="phone" type="phone" class="form__input text">
 
           <label for="email" class="form__label text">
             Mail
@@ -28,18 +28,23 @@
           <label for="website" class="form__label text">
             Adres strony
           </label>
-          <input required id="website" name="website" type="text" class="form__input text">
+          <input id="website" name="website" type="text" class="form__input text">
 
           <label for="message" class="form__label text">
             Wiadomość
           </label>
-          <textarea required id="message" name="message" type="text" rows="1" class="form__input text"></textarea>
+          <textarea id="message" name="message" type="text" rows="1" class="form__input text"></textarea>
 
-          <input required  class="button button--primary text" type="submit" value="Wyślij">
+          <input  class="button button--primary text" type="submit" value="Wyślij">
+          <p class="form__terms text">
+            Zapoznałem się z
+            <a class="link" href="#">polityką prywatności</a>
+            firmy Imaggo.
+          </p>
         </form>
         <figure class="footer__img rellax" data-rellax-speed="-0.6">
           <img src="@asset('images/white-big.png')" alt="donat" class="footer__donat donat rellax" data-rellax-speed="0.6">
-          <img src="@asset('images/contact.jpg')" alt="Zadzwoń do nas" class="img">
+          <img src="@asset('images/contact-1.jpg')" alt="Zadzwoń do nas" class="img">
           <a class="footer__phone text" href="tel:+884 908 508">
             Maciej Ciesielski
             <br>

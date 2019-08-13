@@ -25,4 +25,13 @@
     background: transparent;
     border-bottom: 1px solid color(dark);
   }
+
+  &__terms {
+    @include cssLock(
+      "margin-top",
+      360,
+      1366,
+      (($gutter_num * 1), ($gutter_num * 2))
+    );
+  }
 }

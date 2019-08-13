@@ -24,7 +24,7 @@
     <ul class="cowork__list">
       @foreach ($coworkers as $item)
         <li class="cowork__elem">
-          <img src="@asset('images/coworkers/'. $loop->index .'.png')" alt="{{ $item }}">
+          <img class="cowork__logo" src="@asset('images/coworkers/'. $loop->index .'.png')" alt="{{ $item }}">
         </li>
       @endforeach
     </ul>

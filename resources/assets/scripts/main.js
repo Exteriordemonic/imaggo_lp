@@ -34,8 +34,6 @@ jQuery(document).ready(() => {
     var rellax = new Rellax('.rellax');
     rellax;
   }
-
-  smoothScroll.init();
 });
 
 // setTimeout(()=> {

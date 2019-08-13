@@ -4,20 +4,32 @@
       "grid-row-gap",
       360,
       1366,
-      (($gutter_num * 5), ($gutter_num * 10))
+      (($gutter_num * 2.5), ($gutter_num * 5))
     );
 
     display: grid;
     grid-template-columns: repeat(2, 1fr);
 
     @include media(md) {
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(2, 1fr);
     }
   }
 
   &__elem {
     @include cssLock(
       "padding",
+      360,
+      1366,
+      (($gutter_num * 1.5), ($gutter_num * 3))
+    );
+    @include cssLock(
+      "padding-left",
+      360,
+      1366,
+      (($gutter_num * 3), ($gutter_num * 6))
+    );
+    @include cssLock(
+      "padding-right",
       360,
       1366,
       (($gutter_num * 3), ($gutter_num * 6))

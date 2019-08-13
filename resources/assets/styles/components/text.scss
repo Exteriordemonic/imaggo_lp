@@ -64,3 +64,12 @@
     (($gutter_num * 1.2), ($gutter_num * 2))
   );
 }
+
+.link {
+  color: color("special");
+  transition: $transition;
+
+  &:hover {
+    opacity: 0.6;
+  }
+}

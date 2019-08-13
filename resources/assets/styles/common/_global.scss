@@ -57,3 +57,9 @@ ul {
   padding: 0;
   margin: 0;
 }
+
+.rellax {
+  @media (max-width: map-get($media, md)) {
+    transform: none !important;
+  }
+}
