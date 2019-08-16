@@ -9,7 +9,7 @@
             Napisz do nas
           </h2>
         </header>
-        <form action="/kontakt.php" class="footer__form form" method="POST">
+        <form action="" class="footer__form form" method="POST">
           <label for="name" class="form__label text">
             Imię
           </label>
@@ -35,11 +35,10 @@
           </label>
           <textarea id="message" name="message" type="text" rows="1" class="form__input text"></textarea>
 
-          <input  class="button button--primary text" type="submit" value="Wyślij">
+          <input  class="button button--primary text" name="send" type="submit" value="Wyślij">
           <p class="form__terms text">
-            Zapoznałem się z
-            <a class="link" href="#">polityką prywatności</a>
-            firmy Imaggo.
+            Klikając wyślij akceptujesz
+            <a class="link" href="https://imaggo.pl/polityka-cookies/">polityką prywatności.</a>
           </p>
         </form>
         <figure class="footer__img rellax" data-rellax-speed="-0.6">
